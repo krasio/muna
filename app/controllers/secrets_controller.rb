@@ -5,6 +5,12 @@ class SecretsController < ApplicationController
 
   def create
     secret = Secret.new(raw_content: params[:secret][:raw_content])
-    @encrypted_secret = secret.encrypt_to(GPG_RECIPIENTS)
+
+    if secret.valid?
+      @encrypted_secret = secret.encrypt_to(GPG_RECIPIENTS)
+    else
+      flash.alert = "Please provide some secrets to be encrypted!"
+      redirect_to new_secret_path
+    end
   end
 end
