@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", function() {
     const file = document.createElement('a');
     file.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(secret.innerText);
     file.target = '_blank';
-    file.download = 'secret.gpg';
+    file.download = secret.dataset.filename + '.gpg';
     file.click();
   });
 });

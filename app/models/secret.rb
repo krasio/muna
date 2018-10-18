@@ -1,7 +1,7 @@
 class Secret
   include ActiveModel::Model
 
-  attr_accessor :raw_content, :encrypted_content
+  attr_accessor :raw_content, :name
 
   validates :raw_content,
     presence: true
