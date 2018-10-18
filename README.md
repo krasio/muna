@@ -10,6 +10,8 @@ Simple Rails app for encrypting secrets so that you can email then, post in Jira
 
 Most important thing is to deploy and configure the app to work only for HTTPS requests. All that secrets encrypting stuff makes no sense otherwise.
 
+Secrets are filtered from application logs but you should make sure they are not included in some of your other logs (e.g. nginx, proxy, etc).
+
 ## Configuration
 
 #### Recipients
