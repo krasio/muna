@@ -19,6 +19,6 @@ class SecretsTest < ApplicationSystemTestCase
 
     click_on "Keep it secret. Keep it safe."
 
-    assert_text "Please provide some secrets to be encrypted!"
+    assert_text "Please provide some secrets, no need from all that secrecy if you don't have any!"
   end
 end
