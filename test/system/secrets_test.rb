@@ -15,6 +15,8 @@ class SecretsTest < ApplicationSystemTestCase
   test "Try to encrypt blank secret" do
     visit new_secret_url
 
+    fill_in "secret_raw_content", with: "   "
+
     click_on "Keep it secret. Keep it safe."
 
     assert_text "Please provide some secrets to be encrypted!"
