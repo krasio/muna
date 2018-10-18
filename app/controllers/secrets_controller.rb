@@ -17,6 +17,6 @@ class SecretsController < ApplicationController
   private
 
   def secret_params
-    params.require(:secret).permit(:name, :raw_content)
+    params.require(:secret).permit(:name, :raw)
   end
 end

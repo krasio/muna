@@ -4,7 +4,7 @@ class SecretsTest < ApplicationSystemTestCase
   test "Encrypt some secret text" do
     visit new_secret_url
 
-    fill_in "secret_raw_content", with: "My very secret password!"
+    fill_in "secret_raw", with: "My very secret password!"
 
     click_on "Keep it secret. Keep it safe."
 
@@ -15,7 +15,7 @@ class SecretsTest < ApplicationSystemTestCase
   test "Try to encrypt blank secret" do
     visit new_secret_url
 
-    fill_in "secret_raw_content", with: "   "
+    fill_in "secret_raw", with: "   "
 
     click_on "Keep it secret. Keep it safe."
 
