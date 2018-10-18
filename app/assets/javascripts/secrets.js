@@ -4,9 +4,10 @@
 window.addEventListener("DOMContentLoaded", function() {
   document.querySelector("#copy-to-clipboard").addEventListener("click", e => {
     const secret = document.getElementById("encrypted-secret");
-    window.getSelection().selectAllChildren(secret);
+    const selection = window.getSelection();
+    selection.selectAllChildren(secret);
     document.execCommand("copy");
-    window.getSelection().removeAllRanges();
+    setTimeout(function(s) { s.removeAllRanges(); }, 500, selection);
   });
 
   document.querySelector("#file-download").addEventListener("click", e => {
