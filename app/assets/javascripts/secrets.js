@@ -16,9 +16,9 @@ window.addEventListener("DOMContentLoaded", function() {
     download.addEventListener("click", e => {
       const secret = document.getElementById("encrypted-secret");
       const file = document.createElement('a');
-      file.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(secret.innerText);
+      file.href = `data:text/plain;charset=utf-8,${encodeURIComponent(secret.innerText)}`;
       file.target = '_blank';
-      file.download = secret.dataset.filename + '.gpg';
+      file.download = `${secret.dataset.filename}.gpg`;
       file.click();
     });
   }
