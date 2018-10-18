@@ -2,7 +2,7 @@
 
 > 1. (verb) (-ia) to talk privately.
 > 2. (stative) be confidential, anonymous, secretly.
-> 3. (noun) secret, confidentiality, secrecy."
+> 3. (noun) secret, confidentiality, secrecy.
 
 Simple Rails app for encrypting secrets so that you can email then, post in Jira, etc...
 
