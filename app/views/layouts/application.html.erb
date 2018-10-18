@@ -12,16 +12,20 @@
   </head>
 
   <body>
-    <nav class="navbar has-shadow is-primary">
-      <div class="container">
-        <div class="block">
-          <%= link_to root_path do %>
-            <p class="title is-1">Muna</p>
-          <% end %>
-          <div class="content subtitle is-3"><em><%= subtitles.sample %></em></div>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <div class="block">
+            <%= link_to root_path do %>
+              <p class="title is-1">Muna</p>
+            <% end %>
+            <div class="content subtitle is-3"><em><%= subtitles.sample %></em></div>
+          </div>
         </div>
       </div>
-    </nav>
+    </section>
+
     <%= yield %>
+
   </body>
 </html>
