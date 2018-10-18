@@ -8,4 +8,13 @@ window.addEventListener("DOMContentLoaded", function() {
     document.execCommand("copy");
     window.getSelection().removeAllRanges();
   });
+
+  document.querySelector("#file-download").addEventListener("click", e => {
+    const secret = document.getElementById("encrypted-secret");
+    const file = document.createElement('a');
+    file.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(secret.innerText);
+    file.target = '_blank';
+    file.download = 'secret.gpg';
+    file.click();
+  });
 });
