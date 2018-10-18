@@ -10,7 +10,7 @@ class SecretsController < ApplicationController
       @encrypted_secret = @secret.encrypt_to(GPG_RECIPIENTS)
     else
       flash.alert = "Please provide some secrets, no need from all that secrecy if you don't have any!"
-      redirect_to new_secret_path
+      render :new
     end
   end
 
